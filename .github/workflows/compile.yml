@@ -16,7 +16,7 @@ jobs:
             preset: windows
           - os: ubuntu-latest
             preset: linux
-        config: [Debug, Release]
+        config: [debug, release]
 
     runs-on: ${{ matrix.os }}
 
