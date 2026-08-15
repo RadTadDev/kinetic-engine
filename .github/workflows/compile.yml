@@ -1,4 +1,4 @@
-name: CI
+name: COMPILE
 
 on:
   push:
@@ -14,15 +14,22 @@ jobs:
         include:
           - os: windows-latest
             preset: windows
+            config: debug
+          - os: windows-latest
+            preset: windows
+            config: release
           - os: ubuntu-latest
             preset: linux
-        config: [debug, release]
+            config: debug
+          - os: ubuntu-latest
+            preset: linux
+            config: release
 
     runs-on: ${{ matrix.os }}
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           submodules: recursive
 
