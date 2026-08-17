@@ -35,6 +35,9 @@ jobs:
 
       - name: Install Ninja (Linux)
         if: runner.os == 'Linux'
+        env:
+          DEBIAN_FRONTEND: noninteractive
+          NEEDRESTART_MODE: a
         run: sudo apt-get update && sudo apt-get install -y ninja-build
 
       - name: Install Ninja (Windows)
