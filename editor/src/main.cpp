@@ -1,9 +1,9 @@
-#include "Engine.h"
+#include "Kinetic.h"
 
 int main() {
 
-	Engine engine;
-	engine.Print("Hello from the Editor!");
+	Application app;
+	app.Print("Hello from the Editor!");
 	
 	return 0;
 }
